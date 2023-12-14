@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 1vw;
+}
+
+
+body {
+  color: $defaultColor;
+  background-color: black;
+  h1,h2 {
+    font-size: 4em;
+    font-weight: bold;
+    font-family: $baseFont;
+    color: $emFontColor;
+    &.main {
+      font-size: 10vh;
+      color: $baseFontColor;
+    }
+  }
+  h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: $baseFont;
+    color: $emFontColor;
+    padding: 1em 0;
+  }
+  h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: $baseFont;
+    color: $emFontColor;
+    padding: 1em 0;
+    &.main {
+      font-size: 5vh;
+      color: $baseFontColor;
+      margin-top: 9em;
+    }
+  }
+  p {
+    color: $baseFontColor;
+    font-size: 1.3rem;
+    font-family: $txtFontNormal;
+    line-height: 1.5em;
+    margin: 2em auto;
+
+  }
+  .code {
+    border: solid $emFontColor 1px;
+    background-color: #413f4359;
+    padding: 1em;
+    color: $emFontColor;
+    font-family: $codeFont;
+    font-size: 0.95em;
+    em {
+      color:#c4f8e9;
+      font-style: normal;
+    }
+    .cd {
+      color:$codeColor;
+    }
+    .cl {
+      color:$singleAttrColor;
+    }
+    .dunkelblau {
+      color: rgb(53 53 249 / 75%);
+    }
+    .mittelblau {
+      color: rgb(61 127 212);
+    }
+    .blau {
+      color: #3da9d47d;
+    }
+    .blau2 {
+      color: #55cfff;
+    }
+    .pink {
+      color: rgb(213, 76, 161);
+    }
+    .gelb {
+      color: rgba(206, 206, 78, 0.733);
+    }
+    .green {
+      color: #06a354;
+    }
+    .white {
+      color: white;
+    }
+    @for $i from 1 to 8 {
+      .indent-#{$i} {
+        padding-left: $i*1em;
+      }
+    }
+  }
+  .green-border {
+    border: 1px solid #06a354;
+  }
+}
+ul {
+  list-style-type: none;
+
+  li {
+    position: relative;
+    font-size: 1.8em;
+    font-family: $baseFont;
+    color: $codeColor;
+    padding-left: 1em;
+    padding-bottom: 0.3em;
+    &::before {
+      content: "";
+      display: block;
+      width: .5em;
+      height: .5em;
+      background-color: $singleAttrColor;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 30%;
+    }
+  }
+}
+
+section {
+  height: 100vh;
+  padding: 3em;
+  // background-color: $bgColor;
+  background-color: #000;
+  // border: solid $emFontColor 0.2em;
+  border: solid #fff 0.2em;
+  border-top: none;
+  &:first-child {
+    border-top: solid $emFontColor 0.2em;
+    background-image: url("/assets/images/nodejs-logo.png");
+    background-repeat: no-repeat;
+    background-position: center 26%;
+  }
+  .full-height {
+    min-height: 100%;
+  }
+  .half-height {
+    min-height: 50%;
+  }
+  .quarter-height {
+    min-height: 25%;
+  }
+  .fifth-height {
+    min-height: 15%;
+  }
+  .six-height {
+    min-height: 10%;
+  }
+  .seven-height {
+    min-height: 20%;
+  }
+  .full-weight {
+    min-width: 100%;
+  }
+}
+
+code {
+  color: $codeColor;
+  display: block;
+  .attr {
+    color:$attrColor;
+  }
+  .val {
+    color: $valColor;
+  }
+  .single-attr {
+    color: $singleAttrColor;
+  }
+  &.comment {
+    &::before{
+      content: "<";
+      display: inline;
+      color: $commColor !important;
+    }
+    &::after{
+      content: ">";
+      display: inline;
+      color: $commColor !important;
+    }
+    span {
+      color: $commColor !important;
+    }
+  }
+  &::before{
+    content: "<";
+    display: inline;
+  }
+  &::after{
+    content: ">";
+    display: inline;
+  }
+}
+
+/*Nesting- ceea ce am adaugat*/
+.last {
+  display: flex;
+  .jumbo {
+    background-color: transparentize($bgCodeColor,.2);
+
+  }
+  .col-9.jumbo {
+    width: 5%;
+    .imp {
+      position: relative;
+      right: 0.9em;
+      bottom: 0.7em;
+      &:after {
+        content: "\f06a";
+        text-align: center;
+        font-family: "Font Awesome 5 Free";
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+.indent-1.code-N, .indent-2.code-N, .indent-3.code-N, .code-N{
+  display: inline-block;
+}
+
+
+
+/*Partials and importing*/
+
+.green {
+  color: #06a354;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .image{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    .icons-container {
+      display: flex;
+      .icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon {
+          font-size: 8em;
+        }
+        .icon.left {
+          align-self: flex-start;
+        }
+      }
+      .question {
+        align-self: flex-end;
+        margin-left: 1em;
+        font-size: 2em;
+        color: #06a354;
+      }
+    }
+
+    .text-container{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+}
+
+.container-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container-text {
+    margin-right: 3em;
+    margin-top: 2em;
+    .image {
+      font-size: 13em;
+    }
+  }
+}
+
+.image-two {
+  margin-top: 5em;
+}
+.small-height {
+  height: 0.5em;
+  span{
+    background-color: transparentize($bgCodeColor,.2);
+  }
+}
+.top-margin {
+  margin-top: 12.6em;
+}
+.big-font-size {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+.small-font-size {
+  font-size: 0.8em;
+  margin-top: 5em;
+  width: 12em;
+}
+.rotate {
+  &:after{
+    content: "\f30b";
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-size: 2em;
+    position: relative;
+    left: 0.5em;
+    bottom: 0.5em;
+  }
+}
+.span-bg-color {
+  background-color: transparentize($bgCodeColor,.2);
+}
+.hide-one, .hide-two, .hide-three, .hide-four {
+  display: none;
+}
+.show-one, .show-two, .show-three, .show-four {
+  display: block;
+}
+
+/*Objects*/
+
+ol {
+  list-style: none;
+  counter-reset: li;
+
+  li {
+    position: relative;
+    font-size: 2.2em;
+    font-family: $baseFont;
+    color: $codeColor;
+    padding-left: 1em;
+    padding-bottom: 0.2em;
+    &::before{
+      content: counter(li);
+      counter-increment: li;
+      width: .5em;
+      color: $singleAttrColor;
+      padding-right: 0.6em;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: .2em;
+      height: .2em;
+      background-color: $singleAttrColor;
+      border-radius: 50%;
+      position: relative;
+      bottom: .42em;
+      left: 0.7em;
+
+    }
+  }
+}
+
+/*Objects*/
+.margin-top{
+  margin-top: 2.5em;
+}
+.margin-left {
+  margin-left: 2em;
+}
+.margin-top-2 {
+  margin-top: 4em;
+}
+
+.object_1 {
+  height: 30em;
+  position: relative;
+  bottom: 2.5em;
+  left: 1em;
+}
+.object_2 {
+  height: 30em;
+  margin-left: 13em;
+}
+
+/*This keyword*/
+
+.this_3 {
+  height: 30em;
+}
+
+
+/*Constructor*/
+.prototype_1 {
+  height: 25em;
+  margin-left: 4em;
+}
+.prototype_2 {
+  height: 21em;
+  margin-left: 8em;
+  margin-top: 2em;
+}
+.prototype_3 {
+  height: 10em;
+  margin-left: 12em;
+  margin-top: 2.5em;
+}
+.prototype_4, .prototype_5 {
+  height: 20em;
+  margin-left: 8em;
+}
+.prototype_6 {
+  height: 30em;
+  margin-left: 8em;
+}
+
+.web-schema {
+  justify-content: center;
+  width: 100%;
+  height: 55em;
+  .col-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    .exitPros {
+      margin-top: -4em;
+      margin-left: -2em;
+      display: none;
+    }
+  }
+}
+
+.request-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .nodeServer {
+    width: 100%;
+  }
+}
+
+.border-none {
+  border: none;
+}
+.comands {
+  font-size: 1.3em;
+}
+
+.lastPage {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}

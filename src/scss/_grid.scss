@@ -1,0 +1,35 @@
+@use "sass:math";
+$columns: 6;
+$col-width:math.div(100%,$columns);
+
+.container {
+  &.centrified {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &.evened {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .row {
+    display: flex;
+    [class*="col-"] {
+      width: $col-width;
+      min-height: 1em;
+      padding: 0.5em;
+      &.centrified {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+          width: $i * $col-width;
+        }
+    }
+  }
+}
+
