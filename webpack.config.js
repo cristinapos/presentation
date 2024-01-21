@@ -35,11 +35,9 @@ module.exports = {
                         ["@babel/plugin-proposal-class-properties", { "loose": true }]
                     ]
                 }
-
             },
             {
                 test: /\.scss$/,
-
                 use: [
                     {
                         loader: "url-loader?limit=10000"
@@ -50,9 +48,6 @@ module.exports = {
                             name: './css/[name].css',
                         }
                     },
-
-
-
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -61,7 +56,6 @@ module.exports = {
 
                         }
                     },
-
                     {
                         loader: 'sass-loader',
                         options: {
@@ -69,7 +63,6 @@ module.exports = {
 
                         }
                     }
-
                 ]
             }
         ]

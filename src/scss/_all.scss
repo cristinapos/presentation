@@ -10,7 +10,7 @@ html {
 
 body {
   color: $defaultColor;
-  background-color: black;
+  background-color: #18141D;
   h1,h2 {
     font-size: 4em;
     font-weight: bold;
@@ -124,10 +124,14 @@ ul {
 }
 
 section {
+  // display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: column;
   height: 100vh;
   padding: 3em;
   // background-color: $bgColor;
-  background-color: #000;
+  background-color: #000;;
   // border: solid $emFontColor 0.2em;
   border: solid #fff 0.2em;
   border-top: none;
@@ -429,6 +433,7 @@ ol {
       margin-top: -4em;
       margin-left: -2em;
       display: none;
+      z-index: 2;
     }
   }
 }
@@ -453,4 +458,66 @@ ol {
   display: flex;
   justify-content: center;
   height: 100%;
+}
+
+.response-col {
+  margin-top: 1em;
+  iframe {
+    margin-top: 1em;
+  }
+  p {
+    margin-top: 3em;
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
+.diagram-schema {
+  transition: opacity 1.5s linear;
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.3) rotate(180deg);
+  transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+
+.hidden1 {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+.visible1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-in, transform 1.5s ease-in;
+}
+
+.hidden2 {
+  opacity: 0;
+  transform: translateX(50px);
+  margin-left: 25em;
+  transition: all 2s ease-in, transform 1.5s ease-out;
+}
+.visible2 {
+  opacity: 1;
+  transform: translateX(0);
+  margin-left: 0;
+  transition: all 2s ease-in, transform 1.5s ease-out;
+}
+
+.move {
+  transform: translateX(150px);
+  opacity: 1;
+  transition: transform 4s ease-in-out, opacity 4s ease-in-out;
+}
+
+.stay {
+  cursor: pointer;
+  opacity: 0;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }

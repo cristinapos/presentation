@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Objects</title>
+        <title>Node Basic Course</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
               integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <link href="css/main.css" rel="stylesheet"/>
-        <script  type="text/javascript" src="./js/libraries/jquery.min.js"></script>
         <script src="./js/out.js" type="text/javascript"></script>
     </head>
     <body>
@@ -22,12 +21,12 @@
             <div class="row full-height">
                 <div class="col-6 centrified">
                     <h4 class="main">
-                        Understanding the Basic
+                        Basic Course
                     </h4>
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="contentSection">
             <div class="row fifth-height">
                 <div class="col-6">
                     <h1>
@@ -35,19 +34,19 @@
                     </h1>
                 </div>
             </div>
-            <div class="row quarter-height">
+            <div class="row quarter-height" id="contentList">
                 <div class="col-6">
                     <ol>
-                        <li>How does the web work (Refresher)</li>
-                        <li>Creating a Node.js Server</li>
-                        <li>Using Node Core Modules</li>
-                        <li>Working with Requests & Responses (Basics)</li>
-                        <li>Asynchronous Code & The Event Loop</li>
+                        <li class="hidden1">How does the web work (Refresher)</li>
+                        <li class="hidden1">Creating a Node.js Server</li>
+                        <li class="hidden1">Using Node Core Modules</li>
+                        <li class="hidden1">Working with Requests & Responses (Basics)</li>
+                        <li class="hidden1">Asynchronous Code & The Event Loop</li>
                     </ol>
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="diagram-schema-section">
             <div class="row fifth-height">
                 <div class="col-6">
                     <h1>
@@ -57,11 +56,11 @@
             </div>
             <div class="row full-weight web-schema">
                 <div class="col-6">
-                    <img src="./assets/images/schema-3.png" alt="diagram-schema" class="diagram-schema">
+                    <img src="./assets/images/schema-3.png" alt="diagram-schema" class="hidden diagram-schema">
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="createServer">
             <div class="row full-weight">
                 <div class="col-6">
                     <h2>
@@ -71,7 +70,7 @@
             </div>
             <div class="row quarter-height">
                 <div class="col-6 margin-top request-col">
-                    <iframe width="1500" height="650" src="./assets/video/creatingNodeServer.mp4" class="border-none">
+                    <iframe width="1500" height="650" src="./assets/video/creatingNodeServer.mp4" class="hidden1 border-none">
                     </iframe>
                     <!-- <div class="code nodeServer" >
                         <em class="indent-1 dunkelblau">const </em><em class="green">http</em><em class="white"> = </em><em class="gelb">require</em><em class="cd">(</em><em class="cl">'http'</em><em class="cd">)</em><em class="white">;</em><br/>
@@ -97,7 +96,7 @@
             </div>
             <div class="row full-weight web-schema">
                 <div class="col-6 margin-top">
-                    <img src="./assets/images/lifecicle.PNG" alt="lifecycle" class="margin-top lifecycle">
+                    <img src="./assets/images/lifecicle.PNG" alt="lifecycle" class="hidden margin-top lifecycle">
                     <img src="./assets/images/processExit.PNG" alt="lifecicle" class="margin-top exitPros">
                 </div>
             </div>
@@ -112,11 +111,11 @@
             </div>
             <div class="row quarter-height">
                 <div class="col-6 margin-top request-col">
-                    <iframe width="1500" height="650" src="./assets/video/processExit.mp4" class="border-none"></iframe>
+                    <iframe width="1500" height="650" src="./assets/video/processExit.mp4" class="hidden1 border-none"></iframe>
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="text">
             <div class="row quarter-height">
                 <div class="col-6">
                     <h2>
@@ -126,12 +125,13 @@
             </div>
             <div class="row quarter-height">
                 <div class="col-6">
-                    <p>Want to quit your running Node.js server?</p>
+                    <p id="textToType"></p>
+                    <!-- <p>Doriți să inchideti serverul Node.js care rulează?</p>
                     <p>
-                        You can always do that by pressing 
+                        Puteți face asta oricând apăsând
                         <em class="comands">Ctrl + C</em> 
-                        in the terminal/ command prompt window where you started your server (i. e. where you ran <em>node app.js</em>)
-                    </p>
+                        în terminalul de unde ați pornit serverul node js (<em>node app.js</em>)
+                    </p> -->
                 </div>
             </div>
         </section>
@@ -145,7 +145,7 @@
             </div>
             <div class="row quarter-height">
                 <div class="col-6 margin-top request-col">
-                    <iframe width="1500" height="650" src="./assets/video/req.mp4" class="border-none"></iframe>
+                    <iframe width="1500" height="650" src="./assets/video/req.mp4" class="hidden1 border-none"></iframe>
                 </div>
             </div>
         </section>
@@ -158,8 +158,8 @@
                 </div>
             </div>
             <div class="row quarter-height">
-                <div class="col-6 margin-top request-col">
-                    <iframe width="1500" height="600" src="./assets/video/responses.mp4" class="border-none"></iframe>
+                <div class="col-6 margin-top request-col response-col">
+                    <iframe width="1500" height="600" src="./assets/video/responses.mp4" class="hidden1 border-none"></iframe>
                     <p>On both requests and responses, Http headers are added to transport metadata from A to B.
 
                         The following article provides a great overview of available headers and their role: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers .
@@ -169,7 +169,7 @@
             </div>
         </section>
         <section class="container">
-            <div class="row quarter-height">
+            <div class="row full-weight">
                 <div class="col-6">
                     <h2>
                         Routing requests
@@ -177,15 +177,13 @@
                 </div>
             </div>
             <div class="row quarter-height">
-                <div class="col-6">
-                    <div class="col-6 margin-top request-col">
-                        <iframe width="1500" height="650" src="./assets/video/routingRequests.mp4" class="border-none"></iframe>
-                    </div>
+                <div class="col-6 request-col margin-top">
+                    <iframe width="1500" height="650" src="./assets/video/routingRequests.mp4" class=" hidden1 border-none"></iframe>
                 </div>
             </div>
         </section>
         <section class="container">
-            <div class="row quarter-height">
+            <div class="row full-weight">
                 <div class="col-6">
                     <h2>
                         Redirecting requests
@@ -193,15 +191,13 @@
                 </div>
             </div>
             <div class="row quarter-height">
-                <div class="col-6">
-                    <div class="col-6 margin-top request-col">
-                        <iframe width="1500" height="650" src="./assets/video/redirectingRequests.mp4" class="border-none"></iframe>
-                    </div>
+                <div class="col-6 margin-top request-col">
+                    <iframe width="1500" height="650" src="./assets/video/redirectingRequests.mp4" class="hidden1 border-none"></iframe>
                 </div>
             </div>
         </section>
         <section class="container">
-            <div class="row quarter-height">
+            <div class="row full-weight">
                 <div class="col-6">
                     <h2>
                         Parsing request bodies
@@ -209,15 +205,13 @@
                 </div>
             </div>
             <div class="row quarter-height">
-                <div class="col-6">
-                    <div class="col-6 margin-top request-col">
-                        <iframe width="1500" height="650" src="./assets/video/parsingRequests.mp4" class="border-none"></iframe>
-                    </div>
+                <div class="col-6 margin-top request-col">
+                    <iframe width="1500" height="650" src="./assets/video/parsingRequests.mp4" class="hidden1 border-none"></iframe>
                 </div>
             </div>
         </section>
         <section class="container">
-            <div class="row quarter-height">
+            <div class="row full-weight">
                 <div class="col-6">
                     <h2>
                         Using Node Modules System
@@ -225,10 +219,8 @@
                 </div>
             </div>
             <div class="row quarter-height">
-                <div class="col-6">
-                    <div class="col-6 margin-top request-col">
-                        <iframe width="1500" height="650" src="./assets/video/nodeModules.mp4" class="border-none"></iframe>
-                    </div>
+                <div class="col-6 margin-top request-col">
+                    <iframe width="1500" height="650" src="./assets/video/nodeModules.mp4" class="hidden1 border-none"></iframe>
                 </div>
             </div>
         </section>
@@ -242,11 +234,11 @@
             </div>
             <div class="row full-weight web-schema">
                 <div class="col-6">
-                    <img src="./assets/images/Summary.PNG" alt="summary" class="diagram-schema">
+                    <img src="./assets/images/Summary.PNG" alt="summary" class="hidden diagram-schema">
                 </div>
             </div>
         </section>
-        <section class="container">
+        <section class="container" id="resourcesContent">
             <div class="row quarter-height">
                 <div class="col-6">
                     <h2>
@@ -256,19 +248,19 @@
             </div>
             <div class="row quarter-height">
                 <div class="col-6">
-                    <p>
+                    <p class="resource hidden2">
                         <i class="fas fa-arrow-right green"></i>
                         <span>Official Node.js Docs: https://nodejs.org/en/docs/guides/</span>
                     </p>
-                    <p>
+                    <p class="resource hidden2">
                         <i class="fas fa-arrow-right green"></i>
                         <span>Full Node.js Reference (for all core modules): https://nodejs.org/dist/latest/docs/api/</span>
                     </p>
-                    <p>
+                    <p class="resource hidden2">
                         <i class="fas fa-arrow-right green"></i>
                         <span>More about the Node.js Event Loop: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/</span>
                     </p>
-                    <p>
+                    <p class="resource hidden2"> 
                         <i class="fas fa-arrow-right green"></i>
                         <span>Blocking and Non-Blocking Code: https://nodejs.org/en/docs/guides/dont-block-the-event-loop/</span>
                     </p>
@@ -278,7 +270,7 @@
         <section class="container">
             <div class="row full-weight web-schema">
                 <div class="col-6 lastPage">
-                    <h1>Thank you for attention!</h1>
+                    <h1 class="thanks stay">Thank you for attention!</h1>
                 </div>
             </div>
         </section>
